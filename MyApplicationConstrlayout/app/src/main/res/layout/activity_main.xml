@@ -56,6 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
+            android:background="@drawable/diseno_text"
             android:ems="10"
             android:hint="llenar campo......"
             android:inputType="text" />
@@ -72,6 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:ems="10"
+            android:background="@drawable/diseno_text"
             android:hint="llenar campo......"
             android:inputType="text" />
 
@@ -87,6 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:ems="10"
+            android:background="@drawable/diseno_text"
             android:hint="llenar campo......"
             android:inputType="text" />
 
@@ -101,6 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="@drawable/diseno_text"
             android:hint="llenar campo......"
             android:inputType="text" />
     </LinearLayout>
@@ -191,6 +195,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginRight="25dp"
         android:ems="10"
+        android:background="@drawable/diseno_text"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
