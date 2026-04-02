@@ -44,12 +44,14 @@
                 android:text="USUARIO:" />
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/editText3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/diseno_text"
                 android:ems="10"
-                android:inputType="text" />
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/ic_user"
+                android:inputType="textPassword" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -65,7 +67,31 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/diseno_text"
                 android:ems="10"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/ic_pass"
                 android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="REGISTRO...."
+                android:textAlignment="viewEnd" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recordar Contrasena" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/coloer4"
+                android:text="Button" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
