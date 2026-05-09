@@ -14,13 +14,19 @@ fun main(){
 
     // for
     //for(int a =0; a<10; a++)
-    // fo(i int 1..5)
+    // fo(i int 0..5)
     var i:Int = 0
     for (i in 1..5) {
 
     }
     //for ech
 
+
+    var listadNombre : Array<String> = arrayOf("ala", "rodrigo")
+    for (list in listadNombre){
+        print(list)
+    }
+    listadNombre.forEach { print(it) }
 
     //
 }
