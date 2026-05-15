@@ -4,7 +4,7 @@ fun main(){
 
     //sumas(5,8)
 
-    val lista = sumasLista(mutableListOf(12,34,6), 10)
+    val lista = sumasMejoradaLista(mutableListOf(6,9,66,99,69,37,42,22,12,2,25,39,77,30,15,8,1), -10)
     println(lista)
     //suma total = 52
 
@@ -24,11 +24,19 @@ fun restar(a:Int, b:Int):Int = a-b
 fun sumasLista(a: MutableList<Int>, b: Int): MutableList<Int>{
     var bb:Int = 0
     var listaNueva: MutableList<Int> = mutableListOf()
-
     a.forEach {
         listaNueva.add(it+b)
          }
     return listaNueva
+}
+fun  sumasMejoradaLista(a: MutableList<Int>, b: Int): MutableList<Int>{
+    //[12, 56,34]
+    //17
+    //[6,9,66,99,69,37,42,22,12,2,25,39,77,30,15,8,1]
+    //-10
+    //index[1]
+    a.mapIndexed { index, i ->  a.set(index, i+b)}
+    return a
 }
 
 
