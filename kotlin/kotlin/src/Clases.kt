@@ -5,12 +5,21 @@ fun main(){
     persona.caminar()*/
 
     var persona:Persona3 = Persona3("alan brito", 23)
-    persona.caminar()
+    //persona.caminar()
+
+    var persona5 = Persona5("alan brito", 23)
+    //persona5.setNombre("alan brito dos")
+    //print(persona5.getNombre())
+
+    var alumno: Alumno = Alumno("alan brito", 23, 61)
+    alumno.caminar()
+
 
 }
 
 
 //clases
+
 class Persona{
     //atributos
     var nombre: String = ""
@@ -28,7 +37,7 @@ class Persona{
 
 }
 
-//otra forma de cobntructor
+//otra forma de constructor
 class Persona2 constructor(nombre:String, edad:Int) {
     var nombre: String = ""
     var edad: Int = 0
@@ -39,8 +48,10 @@ class Persona2 constructor(nombre:String, edad:Int) {
 }
 
 //otra forma de cobntructor, menos codigo
-class Persona3 (var nombre:String, var edad:Int) {
-    fun caminar(){
+//para herencia
+//open
+open class Persona3 (var nombre:String, var edad:Int) {
+    open fun caminar(){
         print("caminando persona 3")
     }
 }
@@ -51,3 +62,29 @@ class Persona4 (private var nombre:String, private var edad:Int) {
         print("caminando persona 3")
     }
 }
+
+//set and get
+class Persona5 (private  var nombre:String, private var edad:Int) {
+    //set an get
+    fun setNombre(nombre: String){
+        this.nombre = nombre
+    }
+
+    fun getNombre():String{
+        return  this.nombre
+    }
+
+}
+
+//herencia
+//open = final
+class Alumno(nombre: String, edad: Int, var nota:Int): Persona3(nombre, edad){
+
+    //overide
+    //polimorfismo
+    override fun caminar(){
+        //super.caminar()
+        print("caminando alumno")
+    }
+}
+
