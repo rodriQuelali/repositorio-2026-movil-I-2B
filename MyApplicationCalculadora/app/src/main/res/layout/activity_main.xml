@@ -28,8 +28,9 @@
         android:layout_marginTop="8dp"
         android:text="0"
         android:textAlignment="viewEnd"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -180,6 +181,7 @@
             android:id="@+id/btnSuma"
             android:backgroundTint="@color/black"
             android:text="+"
+            android:textSize="25dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 

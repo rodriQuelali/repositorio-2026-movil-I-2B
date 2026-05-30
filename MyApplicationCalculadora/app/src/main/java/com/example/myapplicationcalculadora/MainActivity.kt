@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplicationcalculadora.data.Calculadora
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -50,18 +51,26 @@ class MainActivity : AppCompatActivity() {
         //programacion estructura
         //POO
         //Procxima clas es POO
+        var numeroAlmacenado: String = ""
+        var auxNumero: String = ""
+        var operador: String = ""
+
         btnSuma.setOnClickListener {
-            /*val num1 = txtN1.text.toString().toInt()
-            val num2 = txtN2.text.toString().toInt()
-            val resul: Int = num1 + num2
-            tvResul.text = resul.toString()*/
+
+            tvView.setText(numeroAlmacenado.toString() + "+")
+            operador = "+"
+            auxNumero = numeroAlmacenado
+            numeroAlmacenado = ""
+            txtN1.setText("")
+
         }
 
         btnResta.setOnClickListener {
-            /*val num1 = txtN1.text.toString().toInt()
-            val num2 = txtN2.text.toString().toInt()
-            val resul: Int = num1 - num2
-            tvResul.text = resul.toString()*/
+            tvView.setText(numeroAlmacenado.toString() + "-")
+            operador = "-"
+            auxNumero = numeroAlmacenado
+            numeroAlmacenado = ""
+            txtN1.setText("")
         }
 
         btnMulti.setOnClickListener {
@@ -81,6 +90,36 @@ class MainActivity : AppCompatActivity() {
                 val resul: Int = num1 / num2
                 tvResul.text = resul.toString()
             }*/
+        }
+
+        btnIgual.setOnClickListener {
+            if(operador == "+"){
+
+                tvView.setText(tvView.text.toString() + numeroAlmacenado)
+                val calculadora = Calculadora(numeroAlmacenado.toInt(), auxNumero.toInt())
+                tvResul.setText((calculadora.suma()).toString())
+
+            }else if( operador == "-"){
+                tvView.setText(tvView.text.toString() + numeroAlmacenado)
+                tvResul.setText((auxNumero.toInt() - numeroAlmacenado.toInt()).toString())
+            }
+
+            //borra datos o limpiar
+            txtN1.setText("")
+            auxNumero = ""
+            numeroAlmacenado = ""
+        }
+
+        //alamenamiento de botnes
+        btn1.setOnClickListener {
+            numeroAlmacenado += "1"
+            txtN1.setText(numeroAlmacenado)
+        }
+
+        btn2.setOnClickListener {
+            numeroAlmacenado += "2"
+            txtN1.setText(numeroAlmacenado)
+
         }
 
     }
