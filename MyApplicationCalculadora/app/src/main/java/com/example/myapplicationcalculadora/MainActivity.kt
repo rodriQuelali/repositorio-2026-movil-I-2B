@@ -2,7 +2,6 @@ package com.example.myapplicationcalculadora
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -96,8 +95,8 @@ class MainActivity : AppCompatActivity() {
             if(operador == "+"){
 
                 tvView.setText(tvView.text.toString() + numeroAlmacenado)
-                val calculadora = Calculadora(numeroAlmacenado.toInt(), auxNumero.toInt())
-                tvResul.setText((calculadora.suma()).toString())
+                val calculadora = Calculadora(numeroAlmacenado, auxNumero)
+                tvResul.setText((calculadora.suma()))
 
             }else if( operador == "-"){
                 tvView.setText(tvView.text.toString() + numeroAlmacenado)
@@ -119,7 +118,11 @@ class MainActivity : AppCompatActivity() {
         btn2.setOnClickListener {
             numeroAlmacenado += "2"
             txtN1.setText(numeroAlmacenado)
+        }
 
+        btnComa.setOnClickListener {
+            numeroAlmacenado += ","
+            txtN1.setText(numeroAlmacenado)
         }
 
     }

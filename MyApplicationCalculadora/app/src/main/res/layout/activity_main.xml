@@ -154,7 +154,7 @@
             app:layout_rowWeight="1" />
 
         <Button
-            android:id="@+id/btn0"
+            android:id="@+id/btn"
             android:backgroundTint="@color/design_default_color_error"
             android:text=","
             app:layout_columnSpan="1"
@@ -162,7 +162,7 @@
             app:layout_rowWeight="1" />
 
         <Button
-            android:id="@+id/btn"
+            android:id="@+id/btn0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
