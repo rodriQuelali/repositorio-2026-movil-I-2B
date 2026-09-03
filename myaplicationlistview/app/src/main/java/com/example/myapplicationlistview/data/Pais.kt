@@ -9,7 +9,9 @@ class Pais(
         return this.nombre
     }
     //fun de get habitantes
-
+    fun getHabitantes():Int{
+        return this.habitantes
+    }
     //set
     //metodos de mi Pais
 

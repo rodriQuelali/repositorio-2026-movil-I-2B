@@ -30,25 +30,28 @@ class MainActivity : AppCompatActivity() {
         val list1=findViewById<ListView>(R.id.list1)
         val txtNombre = findViewById<EditText>(R.id.txtPais)
         val btnAgre = findViewById<Button>(R.id.btnAgregar)
+        val txtHabiatntes = findViewById<EditText>(R.id.txtPais)
 
         val objectPais: MutableList<String> = mutableListOf()
+        val objectHabitantes: MutableList<Int> = mutableListOf()
         val adaptador1 = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, objectPais)
         btnAgre.setOnClickListener {
-            val p = Pais(txtNombre.text.toString(),40_000_000)
+
+            val p = Pais(txtNombre.text.toString(),txtHabiatntes.text.toString().toInt())
             //pop, push
             objectPais.add(p.getNombre())
 
             //add de habitantes
-
+            objectHabitantes.add(p.getHabitantes())
             list1.adapter = adaptador1
             txtNombre.setText("")
         }
 
-        var habitantes = arrayOf(40_000_000, 17_000_000, 6_500_000, 10_000_000, 30_000_000, 14_000_000, 183_000_000, 44_000_000, 31_000_000, 3_500_000)
+
 
         list1.adapter = adaptador1
         list1.setOnItemClickListener { adapterView, view, i, l ->
-            tv1.text = "Población de: ${habitantes[i]}"
+            tv1.text = "Población de: ${objectHabitantes[i]}"
         }
     }
 }
