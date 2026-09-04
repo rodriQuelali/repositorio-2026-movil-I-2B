@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplicationrecirclerview"
+    namespace = "com.example.myapplicationmvvmexamplo"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.myapplicationrecirclerview"
+        applicationId = "com.example.myapplicationmvvmexamplo"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -29,18 +29,21 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 }
 
 dependencies {
     implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.annotation)
     implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.cardview)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
