@@ -9,4 +9,9 @@ class Venta (
 ){
     //metodos
     //get an set
+    fun getNombreCliente():String = this.nombreCliente
+
+    fun getNombreProducto():String = this.nombreProducto
+
+    fun getCantidad(): Int = this.cantidad
 }
