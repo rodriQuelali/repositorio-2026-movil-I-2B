@@ -30,9 +30,9 @@ class VentaAdapter(
     ) {
 
         val nombreCliente = listVenta[position]
-        holder.tvN.text = nombreCliente.getNombreCliente()
-        holder.tvNP.text = nombreCliente.getNombreProducto()
-        holder.tvCan.text = nombreCliente.getCantidad().toString()
+        holder.tvN.text = "Cliente: ${nombreCliente.getNombreCliente()}"
+        holder.tvNP.text = "Producto: ${nombreCliente.getNombreProducto()}"
+        holder.tvCan.text = "Cantidad: ${nombreCliente.getCantidad().toString()}"
 
     }
 
