@@ -33,6 +33,7 @@ class VentaAdapter(
         holder.tvN.text = "Cliente: ${nombreCliente.getNombreCliente()}"
         holder.tvNP.text = "Producto: ${nombreCliente.getNombreProducto()}"
         holder.tvCan.text = "Cantidad: ${nombreCliente.getCantidad().toString()}"
+        holder.tvPre.text = "Precio: ${nombreCliente.getPrecio().toString()}"
 
     }
 
@@ -45,7 +46,7 @@ class VentaAdapter(
         val tvN = itemView.findViewById<TextView>(R.id.tvNombreCliente)
         val tvNP = itemView.findViewById<TextView>(R.id.tvNombreProducto)
         val tvCan = itemView.findViewById<TextView>(R.id.tvCantidad)
+        val tvPre = itemView.findViewById<TextView>(R.id.tvPrecio)
     }
-
 
 }

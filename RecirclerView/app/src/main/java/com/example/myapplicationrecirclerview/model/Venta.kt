@@ -14,4 +14,6 @@ class Venta (
     fun getNombreProducto():String = this.nombreProducto
 
     fun getCantidad(): Int = this.cantidad
+
+    fun getPrecio(): Int = this.precio
 }
