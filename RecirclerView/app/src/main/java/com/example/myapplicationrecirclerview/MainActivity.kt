@@ -29,11 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         //una lista de datos, lista de objetos de ventas.
 
-        val listaObjetVentas = mutableListOf<Venta>(
-            Venta("laptop", "pepe", 5, 1500) ,
-            Venta("Monitor", "pepe", 5, 1500)
-            //mas datos de ventas
-        )
+        val listaObjetVentas: MutableList<Venta> = mutableListOf()
 
         //inicalizar recicrclerView
         binding.rclVentas.layoutManager = LinearLayoutManager(this)
@@ -45,6 +41,17 @@ class MainActivity : AppCompatActivity() {
         binding.rclVentas.adapter = ventaAdapter
 
 
+        //estaado del boton
+        binding.btnAgregar.setOnClickListener {
+
+            listaObjetVentas.add(
+                Venta(binding.txtProducto.text.toString(),
+                    binding.txtCliente.text.toString(),
+                    binding.txtCantidad.text.toString().toInt(),
+                    binding.txtPrecio.text.toString().toInt())
+            )
+            binding.rclVentas.adapter = ventaAdapter
+        }
 
         //codigo
     }
