@@ -9,7 +9,7 @@ data class PlaceEntity (
     val title: String,
     val description: String,
     val photoPath: String,
-    val latiude: Double,
+    val latitude: Double,
     val longitude: Double,
     val createaAt: Long
 )
