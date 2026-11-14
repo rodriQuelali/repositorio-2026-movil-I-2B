@@ -1,5 +1,25 @@
 <resources>
-    <string name="app_name">My Application proyecto MVVMSQLite</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Mis Lugares</string>
+    <string name="title_places_list">Mis Lugares</string>
+    <string name="title_add_place">Nuevo Lugar</string>
+    <string name="title_place_detail">Detalle del Lugar</string>
+    <string name="empty_places_list">No hay lugares guardados. ¡Agrega uno!</string>
+    <string name="label_title">Título</string>
+    <string name="label_description">Descripción</string>
+    <string name="btn_take_photo">Cámara</string>
+    <string name="btn_select_gallery">Galería</string>
+    <string name="select_photo_title">Seleccionar Foto</string>
+    <string name="option_camera">Tomar Foto con Cámara</string>
+    <string name="option_gallery">Seleccionar de la Galería</string>
+    <string name="btn_get_location">Obtener Ubicación</string>
+    <string name="btn_save">Guardar Lugar</string>
+    <string name="btn_delete">Eliminar Lugar</string>
+    <string name="msg_title_required">Ingresa un título</string>
+    <string name="msg_place_saved">Lugar guardado exitosamente</string>
+    <string name="msg_place_deleted">Lugar eliminado</string>
+    <string name="confirm_delete_title">¿Eliminar lugar?</string>
+    <string name="confirm_delete_msg">Esta acción no se puede deshacer.</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="location_not_available">Ubicación no disponible</string>
 </resources>

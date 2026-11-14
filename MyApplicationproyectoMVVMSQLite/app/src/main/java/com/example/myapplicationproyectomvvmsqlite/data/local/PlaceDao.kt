@@ -2,7 +2,6 @@ package com.example.myapplicationproyectomvvmsqlite.data.local
 
 import androidx.room.Dao
 import androidx.room.Delete
-import androidx.room.Entity
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -25,10 +24,10 @@ interface PlaceDao {
     suspend fun insert(place: PlaceEntity): Long
 
     @Update
-    suspend fun update(place: PlaceEntity)
+    suspend fun update(place: PlaceEntity): Int
 
     @Delete
-    suspend fun delete(place: PlaceEntity)
+    suspend fun delete(place: PlaceEntity): Int
 
 
 }

@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/placeListFragment">
+
+    <fragment
+        android:id="@+id/placeListFragment"
+        android:name="com.example.myapplicationproyectomvvmsqlite.ui.Place.list.PlaceListFragment"
+        android:label="@string/title_places_list"
+        tools:layout="@layout/fragment_place_list">
+        <action
+            android:id="@+id/action_placeListFragment_to_placeFormFragment"
+            app:destination="@id/placeFormFragment" />
+        <action
+            android:id="@+id/action_placeListFragment_to_placeDetailFragment"
+            app:destination="@id/placeDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/placeFormFragment"
+        android:name="com.example.myapplicationproyectomvvmsqlite.ui.Place.form.PlaceFormFragment"
+        android:label="@string/title_add_place"
+        tools:layout="@layout/fragment_place_form" />
+
+    <fragment
+        android:id="@+id/placeDetailFragment"
+        android:name="com.example.myapplicationproyectomvvmsqlite.ui.Place.detail.PlaceDetailFragment"
+        android:label="@string/title_place_detail"
+        tools:layout="@layout/fragment_place_detail">
+        <argument
+            android:name="placeId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
 
 </navigation>

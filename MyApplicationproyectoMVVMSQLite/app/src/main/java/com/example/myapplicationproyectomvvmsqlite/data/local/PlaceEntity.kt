@@ -8,8 +8,8 @@ data class PlaceEntity (
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val title: String,
     val description: String,
-    val photoPath: String,
-    val latitude: Double,
-    val longitude: Double,
-    val createaAt: Long
+    val photoPath: String? = null,
+    val latitude: Double? = null,
+    val longitude: Double? = null,
+    val createaAt: Long = System.currentTimeMillis()
 )

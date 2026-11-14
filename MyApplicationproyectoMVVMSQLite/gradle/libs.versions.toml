@@ -10,7 +10,7 @@ activityKtx = "1.13.0"
 constraintlayout = "2.2.2"
 recyclerview = "1.4.0"
 ksp = "2.0.21-1.0.25"
-room = "2.6.1"
+room = "2.8.5"
 navigationFragmentKtx = "2.10.2"
 navigationUiKtx = "2.10.2"
 

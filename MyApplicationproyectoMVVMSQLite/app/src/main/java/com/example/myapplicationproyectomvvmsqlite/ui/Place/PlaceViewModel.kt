@@ -1,6 +1,7 @@
 package com.example.myapplicationproyectomvvmsqlite.ui.Place
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.myapplicationproyectomvvmsqlite.data.local.PlaceEntity
 import com.example.myapplicationproyectomvvmsqlite.data.repository.PlaceRepository
@@ -44,5 +45,17 @@ class PlaceViewModel(private val repository: PlaceRepository) : ViewModel() {
         clearDraft()
     }
 
+    suspend fun getById(id: Int): PlaceEntity? = repository.getById(id)
+
     fun delete(place: PlaceEntity) = viewModelScope.launch { repository.delete(place) }
+}
+
+class PlaceViewModelFactory(private val repository: PlaceRepository) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(PlaceViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return PlaceViewModel(repository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
 }
